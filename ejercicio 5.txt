@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double tot=0,toi=1,top=1;
+    for (int i=1;i<=100;i++)
+    {
+        tot=i%2;
+        if (tot==0)
+        {
+           toi = i*toi;
+        }
+        else
+        {
+            top =top*i;
+        }
+    }
+    cout << "la multiplicacion de todos los numeros impares del 0 al 100 es: "<<toi << endl;
+    cout << "la multiplicacion de todos los numeros pares del 0 al 100 es: "<<top << endl;
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int edad=0,total=0,i=1;
+    char R='S';
+    while (true)
+    {
+        cout << "Ingrese la edad del alumno:" << endl;
+        cin >> edad;
+        if (edad > 18)
+        {
+            total = total/(i-1);
+            cout << "El promedio de edades es: "<<total << endl;
+            cout << "Desea continuar (Si=S, No=N)"<<endl;
+            cin >> R;
+            if (R=='N')
+            {
+                break;
+            }
+            i=0;
+            total=0;
+            edad=0;
+        }
+        total = total+edad;
+        i++;
+    }
+    return 0;
+}

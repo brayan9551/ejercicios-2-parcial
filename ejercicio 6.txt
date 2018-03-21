@@ -1,0 +1,40 @@
+int main() //funcion principal
+{
+    int x1=0,x2=1,tot=0,N=0;//deficinicion de variables enteras
+    char fin ='N'; //deficinicion de variable tipo caracter
+    while (true) //ciclo para cerrar o dejas abierta la consola
+    {
+        cout << "Ingrese el numero de numeros de finobacci que desea ver" << endl;
+        cin >> N; //ingreso del numero hasta donde se da la serie
+        cout << x1<<",";
+        for (int i=1;i!=N;i++) //ciclo para la operacion de los numeros de la serie
+        {
+            tot=i%2; //modulo para saber a que variable entra
+            if (tot==0) //cuando el modulo da 0 cambio el dato de x1
+            {
+                x1 = x1 +x2;
+                cout <<x1<<",";
+            }
+            else //cuando el modulo da 1 cambio el dato de  x2
+            {
+                x2 =x1 + x2;
+                cout <<x2<<",";
+            }
+        }
+        cout << endl<<"Desea cerrar el programa?" << endl;   //volver a correr el programa
+        cout << "Ingrese S para cerrarlo " << endl;
+        cout << "ingrese N para continuar: "<< endl;
+        cin >> fin;
+        if (fin=='S')
+        {
+            break;
+        }
+        else
+        {
+            x1=0; //reinicio variables si vuelve a correr el programa
+            x2=1;
+            tot=0;
+        }
+    }
+    return 0;
+}

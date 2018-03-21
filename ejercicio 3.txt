@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int est =0,i=1,total=0;
+    char fin = 'N';
+    while(true)
+    {
+       cout << "Ingrese la estatura de la "<<i<<" persona (en cm): " << endl;
+       cin>> est;
+       total = total + est;
+       i++;
+       if (est <=0)
+       {
+            total = total/(i-1);
+            cout << "El promedio de estaturas es: "<<total<<endl;
+            cout << "Desea cerrar el programa?" << endl;
+            cout << "Ingrese S para cerrarlo " << endl;
+            cout << "ingrese N para continuar: "<< endl;
+            cin >> fin;
+            if (fin=='S')
+            {
+                break;
+            }
+            i=1;
+            est=0;
+            total=0;
+       }
+
+    }
+
+    return 0;
+}

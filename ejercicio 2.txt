@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num = 0,total = 0;
+    char fin = 'N';
+    while (true)
+    {
+        for (int i=1; i<=10; i++)
+        {
+            cout << "Ingrese el "<<i<<" numero: " << endl;
+            cin>> num;
+            total = total+num;
+        }
+        cout << "La suma de los numeros es: "<< total << endl;
+        cout << "Desea cerrar el programa?" << endl;
+        cout << "Ingrese S para cerrarlo " << endl;
+        cout << "ingrese N para continuar: "<<endl;
+        cin >> fin;
+        total=0;
+        if (fin=='S')
+        {
+            break;
+        }
+    }
+    return 0;
+}

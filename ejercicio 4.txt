@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i=1,i1=0,i2=0,num =0;
+    char fin='N';
+    while(true)
+    {
+        cout << "Ingrese la "<< i <<" cantidad" << endl;
+        cin>> num;
+        if (num<=0)
+        {
+            i1++;
+        }
+        else
+        {
+            i2++;
+        }
+        if(i!=1)
+        {
+            cout << "Desea cerrar el programa?" << endl;
+            cout << "Ingrese S para cerrarlo " << endl;
+            cout << "ingrese N para continuar: "<< endl;
+            cin >> fin;
+            if (fin=='S')
+            {
+                break;
+            }
+        }
+        i++;
+    }
+    cout << "Los numeros menores o iguales a cero son "<< i1 <<" numeros." << endl;
+    cout << "Los numeros mayores a cero son "<< i2 <<" numeros." << endl;
+    return 0;
+}
